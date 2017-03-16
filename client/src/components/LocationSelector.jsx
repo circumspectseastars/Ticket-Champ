@@ -10,6 +10,8 @@ class Location extends React.Component {
     this.state = {
       location: ''
     }
+
+    this.handleLocation = this.handleLocation.bind(this);
   }
 
   handleLocation(event) {
@@ -20,13 +22,15 @@ class Location extends React.Component {
 
   render() {
     return (
-      <span>Select Location</span>
-      <select value={this.state.location} onChange={this.handleLocation.bind(this)}>
-        <option value="1" active>San Francisco</option>
-        <option value="2">Los Angeles</option>
-        <option value="3">Chicago</option>
-        <option value="4">New York</option>
-      </select>
+      <div>
+        <span>Select Location</span>
+        <select value={this.state.location} onChange={this.handleLocation}>
+          <option value="San Francisco" active>San Francisco</option>
+          <option value="Los Angeles">Los Angeles</option>
+          <option value="Chicago">Chicago</option>
+          <option value="New York">New York</option>
+        </select>
+      </div>
     );
   }
 }
