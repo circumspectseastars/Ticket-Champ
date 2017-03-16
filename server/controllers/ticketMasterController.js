@@ -12,15 +12,26 @@ var queryTicketMaserForEvent = function(searchParam) {
       console.log('fired event query');
       var event = JSON.parse(body);
       var id = event._embedded.events[0].id;
+<<<<<<< HEAD
+      console.log(event._embedded.events[0].id)
+      // var eventId = event._embedded.attractions[0].id
+=======
+>>>>>>> 35c7986e5094fe0d116416906ec9ccbbabfdfba1
       queryTicketMaserForPrices(id);
     }
 	})
 };
+<<<<<<< HEAD
+
+var queryTicketMaserForPrices = function(eventId) {
+	//remove hard coded api key
+=======
 //
 
 var queryTicketMaserForPrices = function(eventId) {
 	//remove hard coded api key
   // testing PR
+>>>>>>> 35c7986e5094fe0d116416906ec9ccbbabfdfba1
 	var queryString = 'https://app.ticketmaster.com/commerce/v2/events/' + eventId + '/offers.json?apikey=kyYiscxIL5hihtSs95QwNGsixEv738Zj'
 	request(queryString, function (error, response, body) {
     if (!error && response.statusCode == 200) {
@@ -33,5 +44,9 @@ var queryTicketMaserForPrices = function(eventId) {
 
 module.exports = {
 	queryTicketMaserForEvent: queryTicketMaserForEvent,
+<<<<<<< HEAD
+	queryTicketMaserForPrices: queryTicketMaserForPrices
+=======
+>>>>>>> 35c7986e5094fe0d116416906ec9ccbbabfdfba1
 }
 
