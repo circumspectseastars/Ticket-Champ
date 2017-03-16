@@ -8,6 +8,9 @@ var ticketMasterAPI = require('./controllers/ticketMasterController.js');
 var app = express();
 app.use(express.static(__dirname + '/../client/'));
 
+//test case for ticket master api
+ticketMasterAPI.queryTicketMaserForEvent('warriors');
+
 app.post('/event', function(req, res) {
   var body = '';
   req.on('data', function(chunk) {
