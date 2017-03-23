@@ -70,7 +70,7 @@ app.post('/event', function(req, res) {
                 var sendToClient = [];
                 sendToClient.push(arrayToClient);
                 sendToClient.push(comparisonArray);
-                console.log(sendToClient);
+                console.log("LAST ITEM IN RES", sendToClient);
 
                 res.end(JSON.stringify(sendToClient));
               }
